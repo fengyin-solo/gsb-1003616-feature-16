@@ -5,6 +5,7 @@ const Patrol = () => import('@/views/patrol/index.vue')
 const Firewatch = () => import('@/views/firewatch/index.vue')
 const Lookout = () => import('@/views/lookout/index.vue')
 const Firebreak = () => import('@/views/firebreak/index.vue')
+const Firebreakledger = () => import('@/views/firebreakledger/index.vue')
 const Fireteam = () => import('@/views/fireteam/index.vue')
 const Equipment = () => import('@/views/equipment/index.vue')
 const Weather = () => import('@/views/weather/index.vue')
@@ -28,6 +29,7 @@ const router = createRouter({
     { path: '/firewatch', name: 'firewatch', component: Firewatch },
     { path: '/lookout', name: 'lookout', component: Lookout },
     { path: '/firebreak', name: 'firebreak', component: Firebreak },
+    { path: '/firebreakledger', name: 'firebreakledger', component: Firebreakledger },
     { path: '/fireteam', name: 'fireteam', component: Fireteam },
     { path: '/equipment', name: 'equipment', component: Equipment },
     { path: '/weather', name: 'weather', component: Weather },

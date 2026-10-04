@@ -32,6 +32,27 @@ export type ActionResult = {
   message: string
 }
 
+// 动作上下文：谁（角色/工号）在执行，补植树种、验收批次号由服务层消费
+export type ActionContext = {
+  operator?: string
+  role?: string
+  species?: string
+  batchNo?: string
+}
+
+export type BatchItemResult = {
+  id: number
+  ok: boolean
+  message: string
+}
+
+// 批量整组一次提交的结果：逐条结论 + 汇总
+export type BatchResult = {
+  ok: boolean
+  message: string
+  items: BatchItemResult[]
+}
+
 export type OverviewResult = {
   cards: { label: string; value: number }[]
   modules: { name: string; created: number; pending: number; abnormal: number }[]
